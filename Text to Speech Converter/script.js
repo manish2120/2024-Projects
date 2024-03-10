@@ -3,8 +3,10 @@ const convertBtn = document.querySelector(".js-convertBtn");
 const resetBtn = document.querySelector(".js-resetBtn");
 
 let isSpeaking = true;
+const synth = window.speechSynthesis;
+
+// ------- HANDLING CONVERT BUTTON -------
 convertBtn.addEventListener("click", () => {
-  const synth = window.speechSynthesis;
   const textVal = text.value;
 
   if (!synth.speaking && textVal) {
@@ -27,15 +29,23 @@ convertBtn.addEventListener("click", () => {
     convertBtn.innerText = "Speaking";
   }
 
-  if (!synth.speaking && !isSpeaking) {
-    isSpeaking = true;
-    convertBtn.innerText = "Convert to Speech";
-  }
-});
+  convertBtn.style.backgroundColor = "#3baeb0";
 
+  setInterval(() => {
+    if (!synth.speaking && !isSpeaking) {
+      isSpeaking = true;
+      convertBtn.innerText = "Convert to Speech";
+      convertBtn.style.backgroundColor = "#2D9596";
+    }
+  }, 1000);
+});
+// -------------------------------------
+
+// ----- HANDLING RESET BUTTON ------
 resetBtn.addEventListener("click", () => {
   if (synth.speaking) {
     synth.cancel();
-    text.value = "";
   }
+  text.value = "";
 });
+// -------------------------------

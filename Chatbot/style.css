@@ -21,6 +21,17 @@ body {
   transform: scale(0.5);
   opacity: 0;
   pointer-events: none;
+  transition: all 0.2s ease;
+  transform-origin: bottom right;
+}
+
+.chatbot-toggler {
+  transition: all 0.2s ease;
+}
+
+.show-chatbot .chatbot-toggler {
+  transform: rotate(90deg);
+  transition: all 0.2s ease-in-out;
 }
 
 .chatbot header {
@@ -84,6 +95,7 @@ body {
 .chatbox .outgoing p {
   margin-top: 15px;
 }
+
 
 .chatbot .chat-input {
   position: absolute;

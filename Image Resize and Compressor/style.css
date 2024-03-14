@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 450px;
+  padding: 30px;
+  background-color: bisque;
+  border-radius: 10px;
+}
+
+.wrapper .upload-box {
+  height: 225px;
+  border: 2px dashed black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .upload-box img {
+  height: 45px;
+}
+
+.wrapper.active .upload-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.wrapper.active .upload-box p {
+  display: none;
+}
+
+.wrapper .content {
+  margin-top: 15px;
+}
+
+.content .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.content .row .column {
+  width: calc(100% / 2 - 15px);
+}
+
+.sizes .column input {
+  width: 100%;
+  height: 49px;
+  border: 1px solid #aaa;
+  outline: none;
+  border-radius: 4px;
+  padding: 0 15px;
+  margin-top: 10px;
+}
+
+.sizes .column input:focus {
+  padding: 0 14px;
+  border: 1px solid blue;
+}
+
+.content .checkboxes input {
+  accent-color: red;
+}
+
+.content .download-btn {
+  width: 100%;
+  padding: 1rem 0;
+  margin: 10px 0 0 0;
+  border: none;
+  border-radius: 10px;
+  background-color: blueviolet;
+  color: #fff;
+}

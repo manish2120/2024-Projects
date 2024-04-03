@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Gradient Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper h-screen grid place-content-center justify-items-center">
+    <h1 class="font-extrabold text-white text-[30px] mb-10">Background Gradient Generator</h1>
+    <div class="btns-wrapper">
+      <button
+        class="btn1-js bg-slate-900 text-white px-7 py-3 rounded-full hover:bg-slate-700 transition-colors"></button>
+      <button
+        class="btn2-js bg-slate-900 text-white px-7 py-3 rounded-full hover:bg-slate-700 transition-colors"></button>
+    </div>
+    <div class="generated-property mt-4">
+      <div class="propertyWrapper flex flex-col">
+        <textarea class="colorProperty-js p-3 rounded-t-xl resize-none text-center outline-none border-none  font-mono"
+          rows="2" cols="40"></textarea>
+        <button
+          class="copyBtn-js block bg-green-700 text-white py-2 rounded-b-xl hover:bg-cyan-600 transition-colors">Copy in
+          your Clipboard</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
